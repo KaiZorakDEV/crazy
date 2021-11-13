@@ -14,7 +14,7 @@ function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
-  name: "t.help",
+  name: "a",
   type: "WATCHING"
  
 }
