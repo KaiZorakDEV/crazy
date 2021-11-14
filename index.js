@@ -27,17 +27,13 @@ activity: {
         
         const cont = message.content.split(' ').slice(1);
         const args = cont.join(' ');
-    
-        if (message.content.startsWith(prefix+'invite')){
-            message.channel.send('https://discord.com/api/oauth2/authorize?client_id=902292738492489778&permissions=8&scope=bot');
-    
-        } else if (message.content.startsWith(prefix+ 'say')) {
+        if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
             message.delete()
             message.channel.send(args);
 
         } else if (message.content.startsWith(prefix+'help')) {
-           message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del nombre por ejemplo: t.help.');
+           message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "c." antes del nombre por ejemplo: t.help.');
             const embed = new Discord.MessageEmbed()
 
     .addField('help', 'Sirve para ver los comandos disponibles', true)
@@ -71,6 +67,7 @@ activity: {
     .addField('Dueño del Servidor', server.owner.user.tag +'('+server.owner.user.id +')', true)
     .addField('Miembros', server.memberCount, true)
     .addField('Roles', server.roles.size, true)
+    .setFooter('Hecho por Toondesigner (인도 마호가니#5335)')
     .setColor(0x66b3ff)
 message.channel.send(embed);
       } else if(message.content.startsWith(prefix + "join")){
