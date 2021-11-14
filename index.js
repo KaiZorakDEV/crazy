@@ -45,10 +45,12 @@ activity: {
     .addField('invite', 'Comando inutil si no eres 인도 마호가니#5335', true)
     .addField('avatar', 'Es para ver la foto de perfil de alguien', true)
     .addField('server', 'Es para ver info sobre el server', true)
-
+    .setFooter('Hecho por Toondesigner (인도 마호가니#5335)')
     .setColor(0x66b3ff);
+
     message.channel.send(embed);
-        } else if (message.content.startsWith(prefix+'avatar')) {
+
+          } else if (message.content.startsWith(prefix+'avatar')) {
         let miembro = message.mentions.users.first()
         if (!miembro) {
             const embed = new Discord.MessageEmbed()
