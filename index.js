@@ -52,7 +52,8 @@ activity: {
             const embed = new Discord.MessageEmbed()
                 .setImage(`${message.author.displayAvatarURL()}`)
                 .setColor(0x66b3ff)
-                .setFooter(`Avatar de ${message.author.tag}`);
+                .setFooter(`Avatar de ${message.author.tag}`)
+                .setFooter('Hecho por Toondesigner (인도 마호가니#5335)');
             message.channel.send(embed);
         }
       } else if (message.content.startsWith(prefix+'server')) {
@@ -70,15 +71,7 @@ activity: {
     .setFooter('Hecho por Toondesigner (인도 마호가니#5335)')
     .setColor(0x66b3ff)
 message.channel.send(embed);
-      } else if(message.content.startsWith(prefix + "join")){
-        if(!message.member.voice.channel) return message.channel.send('No estás en un canal de voz')
-        var VC = message.member.voice.channel;
-        
-        VC.join();
-        message.channel.send('Ya estoy únido')
-        } else if (message.content.startsWith(prefix+'hentai')) {
-          message.channel.send(''+message.author.username+',put@ pajero')
-        }
+      }
 });
 //comandos admins
 //comandos solo por id
