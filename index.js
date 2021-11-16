@@ -77,7 +77,7 @@ message.channel.send(embed);
         VC.join();
         message.channel.send('Ya estoy únido')
         } else if (message.content.startsWith(prefix+'hentai')) {
-          message.channel.send('put@ pajero')
+          message.channel.send(''+message.author.username+',put@ pajero')
         }
 });
 //comandos admins
