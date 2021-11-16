@@ -46,12 +46,12 @@ activity: {
     message.channel.send(embed);
 
           } else if (message.content.startsWith(prefix+'avatar')) {
+            message.channel.send (`Avatar de ${message.author.tag}`);
         let miembro = message.mentions.users.first()
         if (!miembro) {
             const embed = new Discord.MessageEmbed()
                 .setImage(`${message.author.displayAvatarURL()}`)
                 .setColor(0x66b3ff)
-                .setFooter(`Avatar de ${message.author.tag}`)
                 .setFooter('Hecho por Toondesigner (인도 마호가니#5335)');
             message.channel.send(embed);
         }
